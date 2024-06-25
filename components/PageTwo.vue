@@ -4,17 +4,9 @@
   <div class="w-full">
     <div class="container mx-auto flex justify-center">
       <div
-        class="w-600 relative transform xl:scale-100 lg::scale-100 sm:scale-75">
-        <div class="absolute name top-[10%] px-32">
+        class="w-600 relative transform xl:scale-100 lg:scale-100 md:scale-100 sm:scale-75">
+        <div class="absolute name top-[10%] px-32 max-sm:px-10">
           <img src="@/assets/Asset 7.png" data-aos="fade-up" alt="" />
-        </div>
-
-        <div class="absolute top-0 right-0">
-          <img
-            src="@/assets/Asset 1.png"
-            class="h-60"
-            alt="flower top"
-            data-aos="fade-up" />
         </div>
 
         <div
@@ -27,16 +19,8 @@
           <img src="@/assets/Asset 8.png" alt="" data-aos="fade-up" />
         </div>
 
-        <div class="absolute name top-[63%] px-12">
+        <div class="absolute name top-[63%] px-12 max-sm:px-6">
           <img src="@/assets/Asset 9.png" alt="" data-aos="fade-up" />
-        </div>
-
-        <div class="absolute bottom-0 left-0">
-          <img
-            src="@/assets/Asset 2.png"
-            class="h-60"
-            alt="flower top"
-            data-aos="fade-up" />
         </div>
       </div>
     </div>

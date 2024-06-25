@@ -22,7 +22,7 @@
 
 <style scoped>
 .w-600 {
-  width: 600px;
+  /* width: 600px; */
   max-width: 600px;
   height: 56px;
 }
