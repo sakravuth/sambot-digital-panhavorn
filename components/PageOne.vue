@@ -9,18 +9,18 @@
           <img src="@/assets/Asset 3.png" alt="" data-aos="fade-up" />
         </div>
 
-        <div class="absolute name top-[48%] px-24 max-sm:px-10">
+        <div class="absolute name top-[48%] px-24 max-sm:top-[58%]">
           <img src="@/assets/Asset 4.png" alt="" data-aos="fade-up" />
         </div>
 
         <div class="relative h-screen flex items-center justify-center">
           <div
-            class="absolute top-[56%] border rounded-md px-10 py-4 border-[#BB7D2C] font-[AKbalthom] text-[1.6rem] max-sm:text-[1.1rem]">
+            class="absolute top-[56%] border rounded-md px-10 py-4 border-[#BB7D2C] font-[AKbalthom] text-[1.6rem] max-sm:top-[68%]">
             <h1>លោក សាក់ រ៉ាវុទ្ធ និង ភរិយា</h1>
           </div>
         </div>
 
-        <div class="absolute top-[70%] px-20 max-sm:px-10">
+        <div class="absolute top-[70%] px-20 max-sm:top-[82%]">
           <img src="@/assets/Asset 6.png" alt="" data-aos="fade-up" />
         </div>
       </div>

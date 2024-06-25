@@ -12,10 +12,16 @@
         ><Icon name="mdi:location" class="text-xl" />
         <span class="text-lg">ទីតាំង</span></NuxtLink
       >
-      <NuxtLink class="mx-3"
-        ><Icon name="mdi:music" class="text-xl" />
-        <span class="text-lg">បិទសំឡេង</span></NuxtLink
-      >
+
+      <NuxtLink
+        class="mx-3"
+        target="_blank"
+        to="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ពិធីឡើងគេហដ្ឋានថ្មី&dates=20240630T000000Z/20240630T010000Z&details=ពិធីឡើងគេហដ្ឋានថ្មី ថ្ងៃអាទិត្យ ទី ៣០ ខែមិថុនា ឆ្នាំ២០២៤&location=&sf=true&output=xml">
+        <Icon
+          name="lets-icons:date-range-duotone-line"
+          class="text-xl -mt-1 mr-1" />
+        <span class="text-lg">កត់ត្រាទុក</span>
+      </NuxtLink>
     </div>
   </footer>
 </template>
