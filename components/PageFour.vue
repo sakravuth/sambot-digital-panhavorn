@@ -5,7 +5,11 @@
     <div class="container mx-auto flex justify-center">
       <div class="w-600 relative">
         <div class="absolute name top-[16%] px-28 max-sm:px-14">
-          <img src="@/assets/Asset 16.png" alt="" data-aos="fade-up" />
+          <NuxtLink
+            to="https://maps.app.goo.gl/sHwxDQzyn8N9cwH79?g_st=it"
+            target="_blank">
+            <img src="@/assets/Asset 16.png" alt="" data-aos="fade-up" />
+          </NuxtLink>
         </div>
 
         <div class="absolute name top-[36%] px-6">
