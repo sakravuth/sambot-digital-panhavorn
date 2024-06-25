@@ -15,8 +15,8 @@
 
         <div class="relative h-screen flex items-center justify-center">
           <div
-            class="absolute top-[56%] border rounded-md px-10 py-4 border-[#BB7D2C] font-[AKbalthom] text-[1.6rem] max-sm:top-[68%]">
-            <h1>លោក សាក់ រ៉ាវុទ្ធ និង ភរិយា</h1>
+            class="absolute top-[56%] border rounded-md px-10 py-4 border-[#BB7D2C] font-[AKbalthom] text-[1.6rem] max-sm:top-[68%] w-[420px] h-[50px]">
+            <h1></h1>
           </div>
         </div>
 
