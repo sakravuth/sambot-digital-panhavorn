@@ -1,0 +1,22 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: "AKbalthom";
+  src: local("AKbalthom HighSchool-Frame"),
+    url(../AKbalthom\ HighSchool-Frame.ttf) format("ttf");
+}
+
+@tailwind utilities;
+
+/* * {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.clipath {
+  width: 130px;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+} */
