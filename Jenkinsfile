@@ -17,7 +17,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    docker.image('node:14').inside {
+                    docker.image('node:18').inside {
                         sh 'npm install'
                     }
                 }
@@ -27,7 +27,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.image('node:14').inside {
+                    docker.image('node:18').inside {
                         sh 'npm run build'
                     }
                 }
