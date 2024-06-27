@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    // agent any
+
+    agent { dockerfile true }
 
     tools {
         nodejs "node20"
