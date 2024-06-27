@@ -10,14 +10,15 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'apt install npm'
-                sh 'npm install'
+                sh 'sudo apt update'       // Update package index
+                sh 'sudo apt install npm'  // Install npm
+                sh 'npm install'           // Install dependencies
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run generate'
+                sh 'npm run generate' // Build your project
             }
         }
     }
