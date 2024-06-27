@@ -9,17 +9,24 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'apt install npm'
-            }
-        }
-
         stage('Build') {
             steps {
+                sh 'npm install'
                 sh 'npm run generate'
             }
         }
+
+        // stage('Test') {
+        //     steps {
+        //         sh 'apt install npm'
+        //     }
+        // }
+
+        // stage('Build') {
+        //     steps {
+        //         sh 'npm run generate'
+        //     }
+        // }
         
     }
     
