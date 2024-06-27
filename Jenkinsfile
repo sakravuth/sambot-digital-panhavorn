@@ -29,16 +29,9 @@ pipeline {
         }
 
         stage('Build Image Docker') {
-            agent {
-                docker { image 'docker:latest' }
-            }
+            agent any
             steps {
-                script {
-                    // Create the Docker config directory within the workspace and set permissions
-                    sh 'mkdir -p ${DOCKER_CONFIG} && chmod 700 ${DOCKER_CONFIG}'
-                    // Use Buildx to build the Docker image
-                    sh 'docker buildx build . -t sakravuth/sambot-digital:latest --platform linux/amd64'
-                }
+                sh 'docker build -t sakravuth/sambot-digital:latest .'
             }
         }
     }
