@@ -12,18 +12,18 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Test & Build') {
             steps {
-                // sh 'sudo apt update'       // Update package index
-                // sh 'sudo apt install npm'  // Install npm
-                sh 'npm install'           // Install dependencies
+                sh 'npm install'
+                sh 'npm run generate'
             }
         }
 
-        stage('Build') {
+        stage('Build Image Docker') {
             steps {
-                sh 'npm run generate' // Build your project
+                sh 'docker build . -t sakravuth/sambot-digital:latest'
             }
         }
+        
     }
 }
