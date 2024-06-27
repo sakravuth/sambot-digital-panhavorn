@@ -8,9 +8,15 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                sh 'sudo apt install npm'
+                sh 'npm install'
+            }
+        }
+
         stage('Build') {
             steps {
-                sh 'npm install'
                 sh 'npm run generate'
             }
         }
