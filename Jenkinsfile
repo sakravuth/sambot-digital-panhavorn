@@ -1,6 +1,9 @@
-
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:20'
+        }
+    }
 
     stages {
         stage('Checkout') {
@@ -15,19 +18,5 @@ pipeline {
                 sh 'npm run generate'
             }
         }
-
-        // stage('Test') {
-        //     steps {
-        //         sh 'apt install npm'
-        //     }
-        // }
-
-        // stage('Build') {
-        //     steps {
-        //         sh 'npm run generate'
-        //     }
-        // }
-        
     }
-    
 }
