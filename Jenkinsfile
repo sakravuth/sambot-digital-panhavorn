@@ -40,7 +40,7 @@ pipeline {
           steps {
             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
               sh "docker login -u ${env.dockerhubUser} -p ${env.dockerhubPassword}"
-              sh 'docker push shanem/spring-petclinic:latest'
+              sh 'docker push sakravuth/sambot-digital:latest'
             }
           }
         }
