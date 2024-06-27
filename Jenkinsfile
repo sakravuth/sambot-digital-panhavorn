@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "node20"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -10,8 +14,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'sudo apt update'       // Update package index
-                sh 'sudo apt install npm'  // Install npm
+                // sh 'sudo apt update'       // Update package index
+                // sh 'sudo apt install npm'  // Install npm
                 sh 'npm install'           // Install dependencies
             }
         }
