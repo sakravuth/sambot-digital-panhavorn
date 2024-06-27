@@ -12,9 +12,14 @@ pipeline {
             }
         }
 
-        stage('Test & Build') {
+        stage('Test') {
             steps {
                 sh 'npm install'
+            }
+        }
+
+        stage('Build & Generate') {
+            steps {
                 sh 'npm run generate'
             }
         }
