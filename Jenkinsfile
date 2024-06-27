@@ -11,13 +11,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'sudo npm install'
+                sh 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'sudo npm run generate'
+                sh 'npm run generate'
             }
         }
         
