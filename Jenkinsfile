@@ -1,7 +1,5 @@
 pipeline {
-    // agent any
-
-    agent { dockerfile true }
+    agent any
 
     tools {
         nodejs "node20"
@@ -12,6 +10,16 @@ pipeline {
     }
 
     stages {
+        stage('Setup Docker Buildx') {
+            steps {
+                script {
+                    // Install and initialize Docker Buildx
+                    sh 'docker buildx create --use'
+                    sh 'docker buildx inspect --bootstrap'
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -31,11 +39,19 @@ pipeline {
         }
 
         stage('Build Image Docker') {
+            agent {
+                docker { image 'docker:latest' }
+            }
+            environment {
+                DOCKER_BUILDKIT = 1 // Enable BuildKit for better performance and features
+            }
             steps {
-                sh 'docker build . -t sakravuth/sambot-digital:latest'
+                script {
+                    // Use Buildx to build the Docker image
+                    sh 'docker buildx build . -t sakravuth/sambot-digital:latest --platform linux/amd64'
+                }
             }
         }
-        
     }
 
     post {
@@ -46,5 +62,4 @@ pipeline {
             echo 'Pipeline failed!'
         }
     }
-    
 }
