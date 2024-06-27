@@ -7,6 +7,10 @@ pipeline {
         nodejs "node20"
     }
 
+    environment {
+        NPM_CONFIG_CACHE = "${env.WORKSPACE}/.npm" // Set npm cache directory to workspace
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -33,4 +37,14 @@ pipeline {
         }
         
     }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+    
 }
